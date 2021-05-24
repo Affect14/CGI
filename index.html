@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>Обработка данных форм</title>
+</head>
+<body>
+        <div class="content">
+
+            <form action="/cgi-bin/add_doctor.py">
+                <h1>Добавить доктора в БД:</h1>
+
+                <div>ФИО доктора</div>
+                <input type="text" name="name">
+                <div>Дата рождения</div>
+                <input type="text" name = "birthdate">
+                <div>Спецификация</div>
+                <input type="text" name = "specification">
+                <p><input type="submit"></p>
+            </form>
+            <form action="/cgi-bin/add_patien.py">
+                <h1>Добавить пациента в БД:</h1>
+                <div>ФИО пациента</div>
+                <input type="text" name="name_pat">
+                <div>Дата рождения</div>
+                <input type="text" name="birthdate_pat">
+                <p><input type="submit"></p>
+            </form>
+            <form action="/cgi-bin/add_visit.py">
+                <h1>Запись на прием:</h1>
+                <div>Доктор</div>
+                <input type="number" name = "doc_id">
+                <div>Пациент</div>
+                <input type="number" name = "pat_id">
+                <div>Время</div>
+                <input type="text" name = "date">
+                <p><input type="submit"></p>
+            </form>
+        </div>
+
+        <p> <a href="cgi-bin/check_bd.py"> Просмотреть базу данных </a> </p>
+</body>
+</html>
